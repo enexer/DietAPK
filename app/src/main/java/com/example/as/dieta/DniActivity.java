@@ -76,7 +76,7 @@ public class DniActivity extends AppCompatActivity {
     }
     @Override
     protected void onDestroy() {
-        // zamykamy instancję Realma //
+        // zamykamy instancję Realma // ///
        // selectedProductsDao.close();
         super.onDestroy();
     }
