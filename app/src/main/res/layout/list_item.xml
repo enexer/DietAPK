@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dip"
+    android:orientation="vertical" >
+
+
+    <TextView
+        android:id="@+id/textViewPListK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="109dp"
+        android:layout_marginRight="109dp"
+        android:background="@color/red_500"
+        android:maxWidth="40dp"
+        android:minWidth="35dp"
+        android:text="100.0" />
+
+    <TextView
+        android:id="@+id/textViewPListName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/textViewPListK"
+        android:layout_toStartOf="@+id/textViewPListK"
+        android:paddingLeft="2dp"
+        android:text="wwwwwwwwwwwww"
+        android:textAlignment="textStart" />
+
+    <TextView
+        android:id="@+id/textViewPListF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/textViewPListP"
+        android:layout_toRightOf="@+id/textViewPListP"
+        android:background="@color/blue_500"
+        android:maxWidth="40dp"
+        android:minWidth="35dp"
+        android:text="100.0" />
+
+    <TextView
+        android:id="@+id/textViewPListP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewPListC"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/textViewPListC"
+        android:layout_marginLeft="36dp"
+        android:layout_marginStart="36dp"
+        android:background="@color/orange_500"
+        android:maxWidth="40dp"
+        android:minWidth="35dp"
+        android:paddingRight="5dp"
+        android:text="1000" />
+
+    <TextView
+        android:id="@+id/textViewPListC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewPListK"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/textViewPListK"
+        android:layout_marginLeft="36dp"
+        android:layout_marginStart="36dp"
+        android:background="@color/yellow_500"
+        android:maxWidth="40dp"
+        android:minWidth="35dp"
+        android:paddingRight="5dp"
+        android:text="1000" />
+
+</RelativeLayout>

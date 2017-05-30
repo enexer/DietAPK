@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/textViewListMeal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="2dip"
+        android:text="meal"
+        android:textSize="20sp"
+        android:textColor="@color/colorAccent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textViewListMealProtein"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_alignBaseline="@+id/textViewListMealCarbo"
+        android:layout_alignBottom="@+id/textViewListMealCarbo"
+        android:layout_toRightOf="@+id/textViewListMealCarbo"
+        android:layout_toEndOf="@+id/textViewListMealCarbo"
+        android:layout_marginLeft="14dp"
+        android:background="@color/orange_500"
+        android:layout_marginStart="14dp" />
+
+    <TextView
+        android:id="@+id/textViewListMealCarbo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/yellow_500"
+        android:layout_below="@+id/textViewListMeal"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewListMealFat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textViewListMealProtein"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:background="@color/blue_500"
+        android:layout_toEndOf="@+id/textViewListMealProtein"
+        android:layout_toRightOf="@+id/textViewListMealProtein"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewListMealKcal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textViewListMealFat"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+        android:background="@color/red_500"
+        android:layout_toEndOf="@+id/textViewListMealFat"
+        android:layout_toRightOf="@+id/textViewListMealFat"
+        android:text="TextView" />
+
+</RelativeLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.as.dieta.PlanActivity">
+
+    <Button
+        android:id="@+id/buttonPn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Poniedziałek"
+        android:onClick="openFood"
+        android:layout_below="@+id/textView123"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/buttonNi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Niedziela"
+        android:onClick="openFood"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/textViewCal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView2"
+        android:onClick="openFood"
+        android:text="TextView"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="17dp" />
+
+    <TextView
+        android:id="@+id/textView123"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textViewCal"
+        android:onClick="openFood"
+        android:layout_marginLeft="43dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="109dp" />
+
+    <Button
+        android:id="@+id/buttonWt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wtorek"
+        android:onClick="openFood"
+        android:layout_below="@+id/textView123"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="47dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/buttonSr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Środa"
+        android:onClick="openFood"
+        android:layout_above="@+id/buttonPt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="52dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/buttonCz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Czwartek"
+        android:onClick="openFood"
+        android:layout_above="@+id/buttonPt"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/buttonPt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Piątek"
+        android:onClick="openFood"
+        android:layout_above="@+id/buttonSo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/buttonSo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sobota"
+        android:onClick="openFood"
+        android:layout_above="@+id/buttonNi"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Twoje zapotrzebowanie kaloryczne(BMR) wynosi:"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+</android.widget.RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.as.dieta.MenuActivity">
+
+    <Button
+        android:id="@+id/buttonMeasure"
+        android:layout_width="243dp"
+        android:layout_height="39dp"
+        android:layout_alignLeft="@+id/buttonPlan"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/buttonPlan"
+        android:layout_marginTop="170dp"
+        android:onClick="openMeasure"
+        android:text="OBLICZ KALORIE"
+        tools:layout_editor_absoluteX="62dp"
+        tools:layout_editor_absoluteY="99dp" />
+
+    <Button
+        android:id="@+id/buttonPlan"
+        android:layout_width="243dp"
+        android:layout_height="39dp"
+        android:layout_alignLeft="@+id/buttonChart"
+        android:layout_alignStart="@+id/buttonChart"
+        android:layout_below="@+id/buttonMeasure"
+        android:onClick="openPlan"
+        android:text="PLAN DIETY"
+        tools:layout_editor_absoluteX="62dp"
+        tools:layout_editor_absoluteY="138dp" />
+
+    <Button
+        android:id="@+id/buttonChart"
+        android:layout_width="243dp"
+        android:layout_height="39dp"
+        android:layout_below="@+id/buttonPlan"
+        android:layout_centerHorizontal="true"
+        android:onClick="openChart"
+        android:text="PRODUKTY"
+        tools:layout_editor_absoluteX="62dp"
+        tools:layout_editor_absoluteY="60dp" />
+</android.widget.RelativeLayout>
