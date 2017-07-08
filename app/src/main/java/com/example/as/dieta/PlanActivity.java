@@ -37,7 +37,7 @@ public class PlanActivity extends AppCompatActivity {
         double fat = Math.round(cal*0.2);
 
         textViewCal = (TextView) findViewById(R.id.textViewCal);
-        textViewCal.setText("Kalorie: "+result+"\nBialkOo: "+protein+"\nWegle: "+carbo+"\nTluszcz: "+fat);
+        textViewCal.setText("Kalorie: "+result+"\nBialkOoo: "+protein+"\nWegle: "+carbo+"\nTluszcz: "+fat);
     }
     public void openFood(View view) {
         Intent intent = new Intent(getApplicationContext(), MealActivity.class);
