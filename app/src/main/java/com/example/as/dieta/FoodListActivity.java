@@ -1,5 +1,7 @@
 package com.example.as.dieta;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
@@ -21,6 +23,7 @@ import com.example.as.dieta.realm.SelectedProductsRealm;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
 
 public class FoodListActivity extends AppCompatActivity {
 
@@ -32,6 +35,8 @@ public class FoodListActivity extends AppCompatActivity {
     private DatabaseAccess databaseAccess;
     private String day_pos;
     private String meal_pos;
+    private String day;
+    private String meal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,38 +51,60 @@ public class FoodListActivity extends AppCompatActivity {
         button = (Button) findViewById(R.id.buttonAddProduct);
         this.listView = (ListView) findViewById(R.id.listViewSelected);
         Intent intent = getIntent();
-        String day    = intent.getStringExtra("day");
-        String meal   = intent.getStringExtra("meal");
+        day    = intent.getStringExtra("day");
+        meal   = intent.getStringExtra("meal");
         day_pos = intent.getStringExtra("day_pos");
         meal_pos = intent.getStringExtra("meal_pos");
-//        buttonDay_id = intent.getIntExtra("buttonDay_id", 0);
-//        buttonMeal_id = intent.getIntExtra("buttonMeal_id", 0);
-//
-//        System.out.println("DAY" + buttonDay_id+",  MEAL"+buttonMeal_id);
-//        if(buttonDay_id == R.id.buttonPn){
-//            System.out.println("PONIEDIALE");
-//        }
-//        if(buttonMeal_id==R.id.buttonMeal6){
-//            System.out.println("sinadanie");
-//        }
-//        int day_p = Integer.parseInt(day_pos);
-//        int meal_p = Integer.parseInt(meal_pos);
-        textViewDM.setText(day + "/" + meal + ", d.p" + day_pos + ", m.p" + meal_pos);
-//////////////////////////
+        textViewDM.setText(day + "/" + meal);
         fillTextView();
 
-///////////////////////////
+        // zapisanie tekstu z strings.xml do listy
+        final ArrayList<String> strings = new ArrayList<>();
+        strings.add(getString(R.string.txt1));
+        strings.add(getString(R.string.txt2));
+        strings.add(getString(R.string.txt3));
+        strings.add(getString(R.string.txt4));
+        strings.add(getString(R.string.txt5));
+        strings.add(getString(R.string.txt6));
+        strings.add(getString(R.string.txt7));
+
+
+        // Dodanie produktow, wyswietlenie porady
         button.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ProductsActivity.class);
-                intent.putExtra("day_pos", day_pos);
-                intent.putExtra("meal_pos", meal_pos);
-                intent.putExtra("directed", true);
-                startActivity(intent);
+                ////////////////////ALERT///////////////////
+                AlertDialog alertDialog = new AlertDialog.Builder(FoodListActivity.this).create();
+                alertDialog.setTitle("Porada");
+
+                // wylosowanie elementu listy
+                Random r = new Random();
+                String str = strings.get(r.nextInt(strings.size()));
+
+                alertDialog.setMessage(str);
+                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+
+                                Intent intent = new Intent(getApplicationContext(), ProductsActivity.class);
+                                intent.putExtra("day_pos", day_pos);
+                                intent.putExtra("meal_pos", meal_pos);
+                                intent.putExtra("day", day);
+                                intent.putExtra("meal", meal);
+                                intent.putExtra("directed", true);
+                                startActivity(intent);
+
+                                dialog.dismiss();
+                            }
+                        });
+                alertDialog.show();
+                ////////////////////ALERT///////////////////
             }
         });
 
+
+        // Usuwanie produktow
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {

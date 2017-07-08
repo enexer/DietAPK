@@ -8,6 +8,7 @@ import android.view.View;
 public class MealActivity extends AppCompatActivity {
 
     public static int id;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +20,7 @@ public class MealActivity extends AppCompatActivity {
         System.out.println("IIIIINN" + id);
 
     }
+
     public void openFoodList(View view) {
         Intent intent = new Intent(getApplicationContext(), FoodListActivity.class);
 //        System.out.println("kkkk"+id);

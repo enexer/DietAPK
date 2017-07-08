@@ -12,22 +12,20 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
     }
+
     public void openMeasure(View view) {
-        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-        // quest tabela z MATMA
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         //intent.putExtra("kategoria", "quest");
         startActivity(intent);
     }
+
     public void openPlan(View view) {
-        Intent intent = new Intent(getApplicationContext(),DniActivity.class);
-        // quest tabela z MATMA
-        //intent.putExtra("kategoria", "quest");
+        Intent intent = new Intent(getApplicationContext(), DniActivity.class);
         startActivity(intent);
     }
+
     public void openChart(View view) {
-        Intent intent = new Intent(getApplicationContext(),ProductsActivity.class);
-        // quest tabela z MATMA
-        //intent.putExtra("kategoria", "quest");
+        Intent intent = new Intent(getApplicationContext(), ProductsActivity.class);
         startActivity(intent);
     }
 }

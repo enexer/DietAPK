@@ -33,14 +33,10 @@ public class MainActivity extends AppCompatActivity {
     private TextView textViewSeek;
     private EditText editTextAge, editTextWeight, editTextHeight;
     private TextView textViewResult;
-    private RadioButton radioButton;
     private Spinner spinner;
     private Button button, buttonHelpActivity;
     private RadioGroup radioGroup;
     public long repeatTime = 0;
-
-
-
 
 
     private void initializeVariables() {
@@ -51,20 +47,12 @@ public class MainActivity extends AppCompatActivity {
         editTextAge = (EditText) findViewById(R.id.editTextAge);
         editTextHeight = (EditText) findViewById(R.id.editTextHeight);
         editTextWeight = (EditText) findViewById(R.id.editTextWeight);
-       // radioButton = (RadioButton) findViewById(R.id.radioButton);
         spinner = (Spinner) findViewById(R.id.spinner);
         button = (Button) findViewById(R.id.button);
         buttonHelpActivity = (Button) findViewById(R.id.buttonHelpActivity);
         radioGroup = (RadioGroup)findViewById(R.id.radioGroup);
 
     }
-
-//    public Dialog createDialog() {
-//        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
-//        dialogBuilder.setTitle("Dialog title");
-//        dialogBuilder.setMessage("Dialog content text...");
-//        return dialogBuilder.create();
-//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -126,17 +114,12 @@ public class MainActivity extends AppCompatActivity {
                 String aTarget = spinner.getSelectedItem().toString();
                 String aGender = ((RadioButton)findViewById(radioGroup.getCheckedRadioButtonId())).getText().toString();
                 String bb = String.valueOf(seekBar.getProgress());
-                String bbb = textViewSeek.getText().toString();
 
                 double age = Double.parseDouble(aAge);
                 double weight = Double.parseDouble(aWeight);
                 double height = Double.parseDouble(aHeight);
                 double activity = Double.parseDouble(aActivity);
 
-
-
-
-                String number, nGender;
                 double bmr = 0;
 
                 double target = 0;
@@ -291,49 +274,5 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    }////////// ON CREATE//////////////////////////////////////////////////////////////////////////
-
-
-
-    public void onRadioButtonClicked(View view) {
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
-
-        // Check which radio button was clicked
-        switch(view.getId()) {
-            case R.id.radioButtonMale:
-                if (checked)
-                    // Pirates are the best
-                System.out.println("tak");
-                    break;
-            case R.id.radioButtonFemale:
-                if (checked)
-                    // Ninjas rule
-                    System.out.println("nie");
-                    break;
-        }
     }
-//    public void onCheckboxClicked(View view) {
-//        // Is the view now checked?
-//        boolean checked = ((CheckBox) view).isChecked();
-//
-//        // Check which checkbox was clicked
-//        switch(view.getId()) {
-//            case R.id.checkbox_meat:
-//                if (checked)
-//                    System.out.println("MIESKO");
-//                // Put some meat on the sandwich
-//            else
-//                // Remove the meat
-//                break;
-//            case R.id.checkbox_cheese:
-//                if (checked)
-//                    System.out.println("SER");
-//                // Cheese me
-//            else
-//                // I'm lactose intolerant
-//                break;
-//            // TODO: Veggie sandwich
-//        }
-//    }
 }

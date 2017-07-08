@@ -20,12 +20,13 @@ public class SelectedProductsDao {
     private RealmConfiguration realmConfig;
 
     public SelectedProductsDao(Context context) {
-        // inicjalizacja realma
+        // inicjalizacja realm
         realmConfig = new RealmConfiguration
                 .Builder(context)
                 .deleteRealmIfMigrationNeeded()
                 .build();
 
+        realm = Realm.getInstance(realmConfig);
 //        DynamicRealm dRealm = DynamicRealm.getInstance(realmConfig);
 //        Log.i("V_",   ""+dRealm.getVersion());
 //        boolean delete = dRealm.getVersion() < 42;
@@ -33,9 +34,6 @@ public class SelectedProductsDao {
 //        if (delete) {
 //            Realm.deleteRealm(realmConfig);
 //        }
-
-
-        realm = Realm.getInstance(realmConfig);
     }
 
     // zamknięcie realma
